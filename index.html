@@ -3,487 +3,535 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Risk Analyst | Jayesh R. Parmar</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Dinesh Parmar | Professional Resume</title>
   <style>
-    :root {
-      --bg-dark: #0b1f2a;
-      --bg-light: #102a3b;
-      --primary: #1dd3b0;
-      --secondary: #4ea8de;
-      --text-light: #e5f6ff;
-      --text-muted: #9db4c0;
-      --card-bg: #132f44;
-      --border-radius: 16px;
-    }
-
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Inter', sans-serif;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     body {
-      background: radial-gradient(circle at top, #123a56, var(--bg-dark));
-      color: var(--text-light);
-      line-height: 1.6;
+      min-height: 100vh;
+      background: url("/mnt/data/8b72d984-7c61-431b-b738-f7d93d9761a8.png") no-repeat center center/cover;
+      color: #ffffff;
       overflow-x: hidden;
     }
 
-    a {
-      color: var(--primary);
-      text-decoration: none;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,0,0,0.75), rgba(0,0,0,0.4));
+      z-index: -1;
     }
 
-    header {
-      padding: 1.5rem 3rem;
+    /* Navbar */
+    .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(11, 31, 42, 0.7);
-      backdrop-filter: blur(10px);
+      padding: 1.5rem 4rem;
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 100;
     }
 
     .logo {
-      font-size: 1.3rem;
+      font-size: 1.6rem;
       font-weight: 700;
-      color: var(--primary);
+      letter-spacing: 1px;
+      color: #00d9ff;
     }
 
-    nav a {
-      margin-left: 1.5rem;
+    .nav-links a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #ffffff;
       font-weight: 500;
-      color: var(--text-light);
+      position: relative;
     }
 
-    nav a:hover {
-      color: var(--primary);
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 2px;
+      background: #00d9ff;
+      transition: width 0.3s ease;
     }
 
-    section {
-      padding: 5rem 3rem;
-      max-width: 1200px;
-      margin: auto;
+    .nav-links a:hover::after {
+      width: 100%;
     }
 
+    /* Hero */
     .hero {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 3rem;
+      min-height: calc(100vh - 80px);
+      display: flex;
       align-items: center;
-      min-height: 90vh;
+      justify-content: center;
+      padding: 2rem 4rem;
+      text-align: center;
     }
 
-    .hero-content h1 {
+    .hero-content {
+      max-width: 900px;
+      backdrop-filter: blur(18px);
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 24px;
+      padding: 4rem 3rem;
+      box-shadow: 0 0 40px rgba(0, 217, 255, 0.15);
+    }
+
+    .hero h1 {
       font-size: 3rem;
+      font-weight: 800;
       margin-bottom: 1rem;
     }
 
-    .hero-content span {
-      color: var(--primary);
+    .hero h1 span {
+      color: #00d9ff;
+      text-shadow: 0 0 12px rgba(0, 217, 255, 0.6);
     }
 
-    .hero-content p {
-      color: var(--text-muted);
-      max-width: 520px;
-      margin-bottom: 2rem;
+    .hero h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      color: #bdefff;
     }
 
-    .hero-buttons a {
-      display: inline-block;
-      padding: 0.9rem 1.5rem;
-      margin-right: 1rem;
+    .hero p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #d6f6ff;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      padding: 0.9rem 2.2rem;
       border-radius: 999px;
+      font-size: 1rem;
       font-weight: 600;
+      text-decoration: none;
       transition: all 0.3s ease;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #00131d;
+      background: linear-gradient(135deg, #00d9ff, #007bff);
+      color: #000000;
+      box-shadow: 0 0 18px rgba(0, 217, 255, 0.5);
     }
 
     .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(29, 211, 176, 0.4);
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 0 28px rgba(0, 217, 255, 0.8);
     }
 
-    .btn-outline {
-      border: 1.5px solid var(--primary);
-      color: var(--primary);
-      background: transparent;
+    .btn-secondary {
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.05);
     }
 
-    .btn-outline:hover {
-      background: var(--primary);
-      color: #00131d;
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
     }
 
-    .hero-visual {
-      position: relative;
-      height: 350px;
-      background: radial-gradient(circle at center, #1dd3b055, transparent 70%);
-      border-radius: var(--border-radius);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
+    /* Sections */
+    section {
+      padding: 6rem 4rem;
     }
 
-    .glow-circle {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      background: radial-gradient(circle, #1dd3b0, #1dd3b033, transparent 70%);
-      filter: blur(10px);
-      animation: pulse 3s infinite ease-in-out;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.8; }
-      50% { transform: scale(1.1); opacity: 1; }
-    }
-
-    h2.section-title {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
+    .section-title {
       text-align: center;
+      font-size: 2.3rem;
+      margin-bottom: 3rem;
+      color: #00d9ff;
+      text-shadow: 0 0 10px rgba(0, 217, 255, 0.4);
     }
 
-    p.section-subtitle {
-      text-align: center;
-      color: var(--text-muted);
-      max-width: 600px;
-      margin: 0 auto 3rem;
+    /* About */
+    .about-content {
+      max-width: 900px;
+      margin: 0 auto;
+      backdrop-filter: blur(14px);
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 20px;
+      padding: 3rem;
+      box-shadow: 0 0 30px rgba(0, 217, 255, 0.12);
+      line-height: 1.8;
+      color: #e0faff;
+      font-size: 1.05rem;
     }
 
-    .cards-grid {
+    /* Skills */
+    .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .skill-card {
+      backdrop-filter: blur(14px);
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(0, 217, 255, 0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 0 45px rgba(0, 217, 255, 0.25);
+    }
+
+    .skill-card h3 {
+      color: #00d9ff;
+      margin-bottom: 1rem;
+    }
+
+    .skill-card ul {
+      list-style: none;
+      padding: 0;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #e0faff;
+    }
+
+    /* Experience */
+    .timeline {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
       gap: 2rem;
     }
 
-    .card {
-      background: linear-gradient(180deg, var(--card-bg), #0f2535);
-      padding: 2rem;
-      border-radius: var(--border-radius);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-      overflow: hidden;
+    .timeline-item {
+      backdrop-filter: blur(14px);
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 0 30px rgba(0, 217, 255, 0.12);
     }
 
-    .card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top left, #1dd3b033, transparent 60%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
+    .timeline-item h3 {
+      color: #00d9ff;
+      margin-bottom: 0.4rem;
     }
 
-    .card:hover::before {
-      opacity: 1;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 15px 40px rgba(29, 211, 176, 0.25);
-    }
-
-    .card h3 {
-      margin-bottom: 0.7rem;
-    }
-
-    .card p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-
-    .experience-item {
-      background: linear-gradient(180deg, var(--card-bg), #0f2535);
-      padding: 2rem;
-      border-radius: var(--border-radius);
-      margin-bottom: 2rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    }
-
-    .experience-item h3 {
-      margin-bottom: 0.3rem;
-    }
-
-    .experience-item span {
-      color: var(--primary);
+    .timeline-item span {
       font-size: 0.9rem;
-      font-weight: 600;
+      color: #bdefff;
+      display: block;
+      margin-bottom: 1rem;
     }
 
-    .experience-item ul {
-      margin-top: 1rem;
+    .timeline-item ul {
       padding-left: 1.2rem;
+      color: #e0faff;
+      font-size: 1rem;
+      line-height: 1.7;
     }
 
-    .experience-item li {
+    .timeline-item ul li {
       margin-bottom: 0.5rem;
-      color: var(--text-muted);
-      font-size: 0.95rem;
     }
 
-    .tools-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    /* Education */
+    .education-list {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
       gap: 1.5rem;
-      text-align: center;
     }
 
-    .tool {
-      background: linear-gradient(180deg, var(--card-bg), #0f2535);
-      padding: 1rem;
-      border-radius: var(--border-radius);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      font-size: 0.9rem;
-      color: var(--text-light);
-    }
-
-    .contact-section {
-      text-align: center;
-    }
-
-    .contact-section p {
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .contact-buttons a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.9rem 1.5rem;
-      border-radius: 999px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-
-    footer {
-      background: #081722;
+    .education-item {
+      backdrop-filter: blur(14px);
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 20px;
       padding: 2rem;
+      box-shadow: 0 0 30px rgba(0, 217, 255, 0.12);
+    }
+
+    .education-item h3 {
+      color: #00d9ff;
+      margin-bottom: 0.4rem;
+    }
+
+    .education-item span {
+      font-size: 0.95rem;
+      color: #bdefff;
+    }
+
+    /* Contact */
+    .contact-content {
+      max-width: 800px;
+      margin: 0 auto;
       text-align: center;
-      color: var(--text-muted);
-      font-size: 0.85rem;
+      backdrop-filter: blur(14px);
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 20px;
+      padding: 3rem;
+      box-shadow: 0 0 30px rgba(0, 217, 255, 0.12);
     }
 
-    /* Scroll animation */
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease;
+    .contact-content p {
+      font-size: 1.1rem;
+      color: #e0faff;
+      margin-bottom: 2rem;
+      line-height: 1.7;
     }
 
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
+    .contact-links a {
+      display: inline-block;
+      margin: 0.5rem 1rem;
+      color: #00d9ff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
     }
 
+    .contact-links a:hover {
+      color: #ffffff;
+    }
+
+    /* Footer */
+    footer {
+      padding: 2.5rem 4rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.7);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.9rem;
+      color: #b8ecff;
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
-      header {
-        padding: 1rem 1.5rem;
+      .navbar {
+        padding: 1.2rem 2rem;
+      }
+
+      .hero {
+        padding: 2rem;
+      }
+
+      .hero-content {
+        padding: 3rem 2rem;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
       }
 
       section {
-        padding: 4rem 1.5rem;
-      }
-
-      .hero-content h1 {
-        font-size: 2.3rem;
+        padding: 4rem 2rem;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">Jayesh Parmar</div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Dinesh Parmar</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">Summary</a>
+      <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
-      <a href="#tools">Tools</a>
+      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
   <!-- Hero Section -->
-  <section class="hero" id="about">
-    <div class="hero-content reveal">
-      <h1>Risk Analyst II <span>Quality Auditor</span></h1>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Dinesh <span>Parmar</span></h1>
+      <h2>Operations & Analytics Professional</h2>
       <p>
-        Risk Analyst with 15+ years of experience in risk assessment, transaction monitoring,
-        chargebacks, loss prevention, and quality auditing. Trusted professional in compliance,
-        coaching, and performance improvement.
+        Results-driven operations and analytics professional with 15+ years of experience
+        in financial data management, leadership reporting, and team supervision. Known for
+        streamlining processes, mentoring teams, and driving performance improvements in
+        fast-changing environments.
       </p>
       <div class="hero-buttons">
-        <a href="#contact" class="btn-primary">Contact Me</a>
-        <a href="#experience" class="btn-outline">View Experience</a>
+        <a href="#experience" class="btn-primary">View Experience</a>
+        <a href="#contact" class="btn-secondary">Contact Me</a>
       </div>
-    </div>
-    <div class="hero-visual reveal">
-      <div class="glow-circle"></div>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services">
-    <h2 class="section-title reveal">Services</h2>
-    <p class="section-subtitle reveal">Professional expertise across risk, fraud, compliance, and quality assurance.</p>
-    <div class="cards-grid">
-      <div class="card reveal">
-        <h3>Risk Assessment</h3>
-        <p>Comprehensive analysis of transaction patterns to identify financial and operational risk.</p>
+  <!-- Professional Summary -->
+  <section id="about">
+    <h2 class="section-title">Professional Summary</h2>
+    <div class="about-content">
+      <p>
+        Results-driven operations and analytics professional with 15+ years of experience
+        in financial data management, leadership reporting, and team supervision. Skilled at
+        streamlining processes, mentoring teams, and driving performance improvements in
+        fast-changing environments. Recognized for exceptional problem-solving abilities,
+        clear communication, and strong client relationship management.
+      </p>
+    </div>
+  </section>
+
+  <!-- Core Competencies -->
+  <section id="skills">
+    <h2 class="section-title">Core Competencies</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Operations</h3>
+        <ul>
+          <li>Operations & Workflow Management</li>
+          <li>Strategic Planning</li>
+          <li>Process Optimization</li>
+        </ul>
       </div>
-      <div class="card reveal">
-        <h3>Fraud Prevention</h3>
-        <p>Real-time screening and early detection strategies to prevent fraud and chargebacks.</p>
+      <div class="skill-card">
+        <h3>Analytics & Reporting</h3>
+        <ul>
+          <li>Financial & Leadership Reporting</li>
+          <li>Data Accuracy & Validation</li>
+          <li>Performance Tracking</li>
+        </ul>
       </div>
-      <div class="card reveal">
-        <h3>Transaction Monitoring</h3>
-        <p>Continuous review of high-risk transactions using advanced monitoring tools.</p>
+      <div class="skill-card">
+        <h3>People Management</h3>
+        <ul>
+          <li>Recruiting & Talent Development</li>
+          <li>Employee Performance Evaluation</li>
+          <li>Team Mentoring & Coaching</li>
+        </ul>
       </div>
-      <div class="card reveal">
-        <h3>Compliance Audits</h3>
-        <p>Ensuring all investigations align with policies, regulations, and quality benchmarks.</p>
-      </div>
-      <div class="card reveal">
-        <h3>Quality Assurance</h3>
-        <p>Coaching analysts, identifying gaps, and improving operational accuracy and efficiency.</p>
+      <div class="skill-card">
+        <h3>Client & Stakeholder</h3>
+        <ul>
+          <li>Client Support</li>
+          <li>Stakeholder Communication</li>
+          <li>Escalation Management</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- Experience Section -->
   <section id="experience">
-    <h2 class="section-title reveal">Experience</h2>
-    <p class="section-subtitle reveal">15+ years of expertise across risk, fraud, and quality operations.</p>
-
-    <div class="experience-item reveal">
-      <h3>Etech Global Services</h3>
-      <span>Risk Analyst II – Quality Auditor | Jan 2026 – Present</span>
-      <ul>
-        <li>Conduct quality audits on risk cases for accuracy and compliance.</li>
-        <li>Provide analyst coaching and feedback.</li>
-        <li>Track quality trends and process gaps.</li>
-        <li>Collaborate with operations and training teams to improve risk detection standards.</li>
-      </ul>
-    </div>
-
-    <div class="experience-item reveal">
-      <h3>Etech Global Services</h3>
-      <span>Risk Analyst II / Fraud Analyst | Chargeback Analyst | Sep 2017 – Dec 2025</span>
-      <ul>
-        <li>Investigated disputed card transactions and resolved cases via refunds, debits, or write-offs.</li>
-        <li>Researched transactions to determine legitimacy and fraud patterns.</li>
-        <li>Communicated findings to consumers and merchants via formal correspondence.</li>
-        <li>Performed real-time fraud and risk screening for a leading U.S. travel website.</li>
-        <li>Reviewed transactions generated by Accertify to detect and prevent losses.</li>
-        <li>Trained new analysts and supported onboarding.</li>
-        <li>Approved transactions in bulk by reviewing minimal data to clear queues.</li>
-        <li>Handled ~70 detailed investigations per day and ~500 bulk resolutions.</li>
-      </ul>
-    </div>
-
-    <div class="experience-item reveal">
-      <h3>Motif India Pvt. Ltd. (now TTEC)</h3>
-      <span>Sr. Fraud Analyst | Feb 2011 – Sep 2017</span>
-      <ul>
-        <li>Performed real-time fraud screening for travel websites.</li>
-        <li>Reviewed transactions using Accertify and Lantern for early fraud detection and loss prevention.</li>
-        <li>Served as a Trust & Safety team member for C2C platforms (Levels 100, 200, and 300 – Chargebacks).</li>
-        <li>Validated reservations, profiles, and properties.</li>
-        <li>Identified fraud trends and reported them to management for rule development.</li>
-        <li>Communicated directly with airlines, hotels, rental car companies, banks, and customers.</li>
-        <li>Reviewed 100+ transactions daily and handled 70+ customer emails per day.</li>
-        <li>Resolved customer issues related to quality, cancellations, refunds, and policy concerns.</li>
-        <li>Handled B2B communications with rental car partners.</li>
-      </ul>
-    </div>
-
-    <div class="experience-item reveal">
-      <h3>Etech Global Services</h3>
-      <span>Chat Representative | Jul 2010 – Jan 2011</span>
-      <ul>
-        <li>Sold internet and phone connections through live chat support.</li>
-      </ul>
-    </div>
-
-    <div class="experience-item reveal">
-      <h3>Mangalam Information Technologies Ltd.</h3>
-      <span>Sales Representative | Jan 2009 – Dec 2009</span>
-      <ul>
-        <li>Sold Mediclaim insurance policies primarily to senior citizens.</li>
-      </ul>
-    </div>
-
-    <div class="experience-item reveal">
-      <h3>Etech Global Services</h3>
-      <span>Customer Care Representative | Sep 2006 – Nov 2008</span>
-      <ul>
-        <li>Placed orders for U.S. sales representatives for phone and TV connections.</li>
-      </ul>
+    <h2 class="section-title">Professional Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Assistant Manager — QX Global Services Pvt. Ltd., Ahmedabad</h3>
+        <span>Nov 2016 – Present</span>
+        <ul>
+          <li>Lead daily operations and supervise staff to ensure consistent workflow and high-quality client deliverables.</li>
+          <li>Implement process improvements that enhanced efficiency and reduced turnaround time.</li>
+          <li>Provide escalation support, resolving complex client issues promptly.</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <h3>Senior Analyst — S&P Global Market Intelligence, Ahmedabad</h3>
+        <span>Dec 2009 – Jul 2016</span>
+        <ul>
+          <li>Collected and analyzed financial data for European region banks, ensuring accuracy and completeness for SNL products.</li>
+          <li>Maintained key departmental data systems and supported clients on data-related queries.</li>
+          <li>Tools: CTS, West, Extractor.</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <h3>Customer Care Representative — LionTEL Info Solutions Pvt. Ltd., Ahmedabad</h3>
+        <span>Jun 2009 – Dec 2009</span>
+        <ul>
+          <li>Marketed and sold debt management programs to a diverse client base.</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <h3>Site Coordinator / HR Assistant — PMC Projects India Pvt. Ltd., Mundra</h3>
+        <span>Apr 2008 – Mar 2009</span>
+        <ul>
+          <li>Coordinated operations across mining project sites and assisted HR in recruitment and employee management.</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <h3>Customer Care Representative — Etech, Inc., Gandhinagar</h3>
+        <span>Nov 2006 – Apr 2008</span>
+        <ul>
+          <li>Processed purchase orders and promoted telecom/broadband products to prospective customers.</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <h3>Customer Care Representative — Reliance Infostreams Pvt. Ltd., Navi Mumbai</h3>
+        <span>Jun 2006 – Nov 2006</span>
+        <ul>
+          <li>Onboarded new customers, verified records, and educated them on tariff plans.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <!-- Tools Section -->
-  <section id="tools">
-    <h2 class="section-title reveal">Tools & Technologies</h2>
-    <p class="section-subtitle reveal">Platforms and systems used across risk, fraud, and quality operations.</p>
-    <div class="tools-grid">
-      <div class="tool reveal">Salesforce</div>
-      <div class="tool reveal">Accertify</div>
-      <div class="tool reveal">Lantern</div>
-      <div class="tool reveal">Zendesk</div>
-      <div class="tool reveal">Fraud Console</div>
-      <div class="tool reveal">LUX</div>
-      <div class="tool reveal">Torch</div>
-      <div class="tool reveal">Emailage</div>
-      <div class="tool reveal">Targus</div>
-      <div class="tool reveal">WPP</div>
-      <div class="tool reveal">MS Word</div>
-      <div class="tool reveal">Excel</div>
+  <!-- Education Section -->
+  <section id="education">
+    <h2 class="section-title">Education</h2>
+    <div class="education-list">
+      <div class="education-item">
+        <h3>PGDB, Banking & Business Finance</h3>
+        <span>The Maharaja Sayajirao University of Baroda — 2006</span>
+      </div>
+      <div class="education-item">
+        <h3>B.Com, Accounting & Finance Management</h3>
+        <span>The Maharaja Sayajirao University of Baroda — 2005</span>
+      </div>
+      <div class="education-item">
+        <h3>HSC</h3>
+        <span>V.M. English Medium School, Halol — 2002</span>
+      </div>
+      <div class="education-item">
+        <h3>SSC</h3>
+        <span>Mithapur High School, Mithapur — 2000</span>
+      </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="contact-section">
-    <h2 class="section-title reveal">Contact</h2>
-    <p class="reveal">Let’s connect to discuss risk, compliance, and quality assurance opportunities.</p>
-    <div class="contact-buttons reveal">
-      <a href="mailto:jp18886@yahoo.co.in" class="btn-primary">Email Me</a>
-      <a href="tel:9054798160" class="btn-outline">Call Me</a>
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-content">
+      <p>
+        Ahmedabad, India 380028<br />
+        📞 +91 90990 15620<br />
+        ✉️ d.prmr2050@gmail.com
+      </p>
+      <div class="contact-links">
+        <a href="mailto:d.prmr2050@gmail.com">Email</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Resume PDF</a>
+      </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2026 Jayesh R. Parmar. All rights reserved.</p>
+    © 2026 Dinesh Parmar. All rights reserved.
   </footer>
-
-  <script>
-    // Scroll reveal animation
-    const reveals = document.querySelectorAll('.reveal');
-
-    function revealOnScroll() {
-      const windowHeight = window.innerHeight;
-      reveals.forEach(el => {
-        const elementTop = el.getBoundingClientRect().top;
-        const revealPoint = 100;
-        if (elementTop < windowHeight - revealPoint) {
-          el.classList.add('active');
-        }
-      });
-    }
-
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll();
-  </script>
 </body>
 </html>
