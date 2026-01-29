@@ -3,487 +3,430 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Risk Analyst | Jayesh R. Parmar</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Piyush Solanki - Online Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg-dark: #0b1f2a;
-      --bg-light: #102a3b;
-      --primary: #1dd3b0;
-      --secondary: #4ea8de;
-      --text-light: #e5f6ff;
-      --text-muted: #9db4c0;
-      --card-bg: #132f44;
-      --border-radius: 16px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
     body {
-      background: radial-gradient(circle at top, #123a56, var(--bg-dark));
-      color: var(--text-light);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: var(--primary);
-      text-decoration: none;
+      background-color: #2f2c63;
+      color: #ffffff;
     }
 
     header {
-      padding: 1.5rem 3rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(11, 31, 42, 0.7);
-      backdrop-filter: blur(10px);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      padding: 20px 60px;
     }
 
     .logo {
-      font-size: 1.3rem;
+      font-size: 28px;
       font-weight: 700;
-      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     nav a {
-      margin-left: 1.5rem;
+      margin-left: 25px;
+      text-decoration: none;
+      background: #ffffff;
+      color: #2f2c63;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 14px;
       font-weight: 500;
-      color: var(--text-light);
-    }
-
-    nav a:hover {
-      color: var(--primary);
-    }
-
-    section {
-      padding: 5rem 3rem;
-      max-width: 1200px;
-      margin: auto;
     }
 
     .hero {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 3rem;
+      grid-template-columns: 1fr 1fr;
       align-items: center;
-      min-height: 90vh;
+      padding: 60px;
+      gap: 40px;
     }
 
-    .hero-content h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+    .hero-text h5 {
+      color: #f7ff00;
+      font-weight: 500;
+      margin-bottom: 10px;
     }
 
-    .hero-content span {
-      color: var(--primary);
+    .hero-text h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
     }
 
-    .hero-content p {
-      color: var(--text-muted);
-      max-width: 520px;
-      margin-bottom: 2rem;
+    .hero-text h1 span {
+      color: #5ce1e6;
     }
 
-    .hero-buttons a {
-      display: inline-block;
-      padding: 0.9rem 1.5rem;
-      margin-right: 1rem;
-      border-radius: 999px;
+    .hero-text p {
+      font-size: 16px;
+      max-width: 500px;
+      margin-bottom: 25px;
+      color: #e0e0e0;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
       font-weight: 600;
-      transition: all 0.3s ease;
+      font-size: 14px;
     }
 
-    .btn-primary {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #00131d;
+    .btn-download {
+      background: #ffffff;
+      color: #2f2c63;
     }
 
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(29, 211, 176, 0.4);
+    .btn-hire {
+      background: #ff6a00;
+      color: #ffffff;
     }
 
-    .btn-outline {
-      border: 1.5px solid var(--primary);
-      color: var(--primary);
-      background: transparent;
-    }
-
-    .btn-outline:hover {
-      background: var(--primary);
-      color: #00131d;
-    }
-
-    .hero-visual {
-      position: relative;
-      height: 350px;
-      background: radial-gradient(circle at center, #1dd3b055, transparent 70%);
-      border-radius: var(--border-radius);
+    .hero-image {
+      background: linear-gradient(135deg, #5c9ded, #7f6aed, #ffb347);
+      border-radius: 20px;
+      padding: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
     }
 
-    .glow-circle {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      background: radial-gradient(circle, #1dd3b0, #1dd3b033, transparent 70%);
-      filter: blur(10px);
-      animation: pulse 3s infinite ease-in-out;
+    .hero-image img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
     }
 
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.8; }
-      50% { transform: scale(1.1); opacity: 1; }
+    /* Resume Content Section */
+    .resume-section {
+      background: #ffffff;
+      color: #333;
+      padding: 60px;
     }
 
-    h2.section-title {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-      text-align: center;
+    .container {
+      max-width: 1000px;
+      margin: auto;
     }
 
-    p.section-subtitle {
-      text-align: center;
-      color: var(--text-muted);
-      max-width: 600px;
-      margin: 0 auto 3rem;
+    h2 {
+      color: #1f4f8b;
+      border-bottom: 2px solid #1f4f8b;
+      padding-bottom: 6px;
+      margin: 40px 0 20px;
     }
 
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
+    p, li {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #333;
     }
 
-    .card {
-      background: linear-gradient(180deg, var(--card-bg), #0f2535);
-      padding: 2rem;
-      border-radius: var(--border-radius);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-      overflow: hidden;
+    ul {
+      margin-left: 20px;
+      margin-bottom: 15px;
     }
 
-    .card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top left, #1dd3b033, transparent 60%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .card:hover::before {
-      opacity: 1;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 15px 40px rgba(29, 211, 176, 0.25);
-    }
-
-    .card h3 {
-      margin-bottom: 0.7rem;
-    }
-
-    .card p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-
-    .experience-item {
-      background: linear-gradient(180deg, var(--card-bg), #0f2535);
-      padding: 2rem;
-      border-radius: var(--border-radius);
-      margin-bottom: 2rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    }
-
-    .experience-item h3 {
-      margin-bottom: 0.3rem;
-    }
-
-    .experience-item span {
-      color: var(--primary);
-      font-size: 0.9rem;
+    .job-title {
       font-weight: 600;
+      color: #2c3e50;
     }
 
-    .experience-item ul {
-      margin-top: 1rem;
-      padding-left: 1.2rem;
+    .company {
+      font-style: italic;
+      color: #555;
     }
 
-    .experience-item li {
-      margin-bottom: 0.5rem;
-      color: var(--text-muted);
-      font-size: 0.95rem;
+    .date {
+      float: right;
+      color: #777;
     }
 
-    .tools-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 1.5rem;
-      text-align: center;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
     }
 
-    .tool {
-      background: linear-gradient(180deg, var(--card-bg), #0f2535);
-      padding: 1rem;
-      border-radius: var(--border-radius);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      font-size: 0.9rem;
-      color: var(--text-light);
+    table, th, td {
+      border: 1px solid #ccc;
     }
 
-    .contact-section {
-      text-align: center;
+    th, td {
+      padding: 10px;
+      text-align: left;
+      font-size: 14px;
     }
 
-    .contact-section p {
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .contact-buttons a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.9rem 1.5rem;
-      border-radius: 999px;
-      font-weight: 600;
-      transition: all 0.3s ease;
+    th {
+      background: #f0f0f0;
     }
 
     footer {
-      background: #081722;
-      padding: 2rem;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.85rem;
+      background: #2f2c63;
+      padding: 25px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      color: #cccccc;
     }
 
-    /* Scroll animation */
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease;
+    .socials a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 15px;
     }
 
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
 
-    @media (max-width: 768px) {
       header {
-        padding: 1rem 1.5rem;
+        flex-direction: column;
+        gap: 15px;
       }
 
-      section {
-        padding: 4rem 1.5rem;
+      nav a {
+        margin-left: 10px;
       }
 
-      .hero-content h1 {
-        font-size: 2.3rem;
+      .date {
+        float: none;
+        display: block;
+        margin-top: 5px;
       }
     }
   </style>
 </head>
 <body>
+
+  <!-- HEADER -->
   <header>
-    <div class="logo">Jayesh Parmar</div>
+    <div class="logo">📁 Online Resume</div>
     <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#experience">Experience</a>
-      <a href="#tools">Tools</a>
+      <a href="#home">Home</a>
+      <a href="#resume">Resume</a>
+      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="about">
-    <div class="hero-content reveal">
-      <h1>Risk Analyst II <span>Quality Auditor</span></h1>
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h5>Banking & Finance Professional</h5>
+      <h1>Hello, I'm <br><span>Piyush Solanki</span></h1>
       <p>
-        Risk Analyst with 15+ years of experience in risk assessment, transaction monitoring,
-        chargebacks, loss prevention, and quality auditing. Trusted professional in compliance,
-        coaching, and performance improvement.
+        Experienced banking professional with 7+ years in retail banking, loan against property (LAP), auto loans, branch operations, recovery, and customer relationship management.
       </p>
-      <div class="hero-buttons">
-        <a href="#contact" class="btn-primary">Contact Me</a>
-        <a href="#experience" class="btn-outline">View Experience</a>
+      <div class="buttons">
+        <button class="btn btn-download" onclick="alert('Download feature can be linked to your PDF resume.')">Download Resume</button>
+        <button class="btn btn-hire" onclick="location.href='#contact'">Hire Me</button>
       </div>
     </div>
-    <div class="hero-visual reveal">
-      <div class="glow-circle"></div>
+
+    <div class="hero-image">
+      <img src="https://via.placeholder.com/300x400?text=Your+Photo" alt="Profile Photo">
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services">
-    <h2 class="section-title reveal">Services</h2>
-    <p class="section-subtitle reveal">Professional expertise across risk, fraud, compliance, and quality assurance.</p>
-    <div class="cards-grid">
-      <div class="card reveal">
-        <h3>Risk Assessment</h3>
-        <p>Comprehensive analysis of transaction patterns to identify financial and operational risk.</p>
-      </div>
-      <div class="card reveal">
-        <h3>Fraud Prevention</h3>
-        <p>Real-time screening and early detection strategies to prevent fraud and chargebacks.</p>
-      </div>
-      <div class="card reveal">
-        <h3>Transaction Monitoring</h3>
-        <p>Continuous review of high-risk transactions using advanced monitoring tools.</p>
-      </div>
-      <div class="card reveal">
-        <h3>Compliance Audits</h3>
-        <p>Ensuring all investigations align with policies, regulations, and quality benchmarks.</p>
-      </div>
-      <div class="card reveal">
-        <h3>Quality Assurance</h3>
-        <p>Coaching analysts, identifying gaps, and improving operational accuracy and efficiency.</p>
-      </div>
+  <!-- RESUME CONTENT -->
+  <section class="resume-section" id="resume">
+    <div class="container">
+
+      <h2>Contact Information</h2>
+      <p>
+        📍 B-17, Vaikunth Society, Near Water Tank, Vadodara Road, Halol – 389350, Dist. Panchmahal<br>
+        📞 9664646338 / 8160199062<br>
+        📧 piyushsolanki1530@gmail.com
+      </p>
+
+      <h2>Career Objective</h2>
+      <p>
+        Results-driven banking professional with over 7+ years of experience in retail banking, loan against property (LAP), auto loans, branch operations, recovery, and customer relationship management. Seeking a growth-oriented role where I can contribute my expertise to organizational success.
+      </p>
+
+      <h2>Professional Summary</h2>
+      <ul>
+        <li>7+ years of experience in banking, NBFC, and financial services.</li>
+        <li>Expertise in Loan Against Property (LAP), auto loans, recovery, and account opening.</li>
+        <li>Proficient in Finacle, Salesforce (SFDC), eMudra, iLearn, Outlook, e-Statement, Edge, Foreclosure Systems, Banking Partner, and SalesOne.</li>
+        <li>Strong leadership, communication, and target-achievement skills.</li>
+      </ul>
+
+      <h2>Work Experience</h2>
+
+      <p>
+        <span class="job-title">Manager – Loan Against Property</span>
+        <span class="date">Jan 2021 – Jan 2026</span><br>
+        <span class="company">IDFC First Bank Ltd., Halol Branch</span>
+      </p>
+      <ul>
+        <li>Managed branch portfolio and recovery targets.</li>
+        <li>Verified financial statements and property documents.</li>
+        <li>Conducted property identification and site visits.</li>
+        <li>Coordinated with sales teams and field officers.</li>
+        <li>Ensured customer satisfaction and regulatory compliance.</li>
+      </ul>
+
+      <p>
+        <span class="job-title">Manager – Loan Against Property</span>
+        <span class="date">May 2019 – Jan 2021</span><br>
+        <span class="company">Fullerton India Credit Company, Gram Shakti Bodeli Branch</span>
+      </p>
+      <ul>
+        <li>Handled loan processing, documentation, and disbursement.</li>
+        <li>Led field operations and recovery follow-ups.</li>
+        <li>Maintained portfolio quality and customer relationships.</li>
+      </ul>
+
+      <p>
+        <span class="job-title">Senior Sales Executive – Auto Loans</span>
+        <span class="date">Apr 2017 – May 2019</span><br>
+        <span class="company">ICICI Bank Ltd., Halol Branch</span>
+      </p>
+      <ul>
+        <li>Achieved auto loan sales targets.</li>
+        <li>Managed customer acquisition and loan processing.</li>
+        <li>Provided excellent customer service.</li>
+      </ul>
+
+      <p>
+        <span class="job-title">Sales Executive – Account Opening</span>
+        <span class="date">6 Months</span><br>
+        <span class="company">IDBI Bank Ltd., Halol Branch</span>
+      </p>
+      <ul>
+        <li>Opened CASA accounts and cross-sold banking products.</li>
+        <li>Assisted customers with onboarding and documentation.</li>
+      </ul>
+
+      <p>
+        <span class="job-title">Teacher</span>
+        <span class="date">4 Years</span><br>
+        <span class="company">Halol Kumar Shala, Pratham Foundation, Halol</span>
+      </p>
+      <ul>
+        <li>Delivered quality education and supported student development.</li>
+      </ul>
+
+      <h2>Educational Qualifications</h2>
+      <table>
+        <tr>
+          <th>Qualification</th>
+          <th>Board / University</th>
+          <th>Year</th>
+          <th>Result</th>
+        </tr>
+        <tr>
+          <td>PGDCA</td>
+          <td>ITCT, Halol</td>
+          <td>2015</td>
+          <td>A+</td>
+        </tr>
+        <tr>
+          <td>B.Ed.</td>
+          <td>Gujarat University</td>
+          <td>2014</td>
+          <td>Distinction</td>
+        </tr>
+        <tr>
+          <td>B.A.</td>
+          <td>Gujarat University</td>
+          <td>2012</td>
+          <td>Second Class</td>
+        </tr>
+        <tr>
+          <td>CCC</td>
+          <td>DOEACC Society</td>
+          <td>2012</td>
+          <td>Bonafide</td>
+        </tr>
+        <tr>
+          <td>P.T.C.</td>
+          <td>SEB, Gandhinagar</td>
+          <td>2010</td>
+          <td>76.80%</td>
+        </tr>
+        <tr>
+          <td>H.S.C.</td>
+          <td>G.H.S.E.B., Gandhinagar</td>
+          <td>2007</td>
+          <td>65.00%</td>
+        </tr>
+        <tr>
+          <td>S.S.C.</td>
+          <td>G.S.E.B., Gandhinagar</td>
+          <td>2005</td>
+          <td>67.29%</td>
+        </tr>
+      </table>
+
+      <h2 id="skills">Technical & Banking Skills</h2>
+      <ul>
+        <li>Banking Software: Finacle, Salesforce (SFDC), eMudra, iLearn, Outlook, e-Statement, Edge, Foreclosure Systems, Banking Partner, SalesOne</li>
+        <li>Loan Processing, Credit Assessment, Documentation, Recovery</li>
+        <li>Branch Operations, Portfolio Management, Compliance</li>
+        <li>Customer Relationship Management, Sales & Marketing</li>
+      </ul>
+
+      <h2>Key Responsibilities</h2>
+      <ul>
+        <li>Branch portfolio management and target distribution</li>
+        <li>Field operations and troubleshooting</li>
+        <li>Customer counseling and service</li>
+        <li>Loan recovery and follow-ups</li>
+        <li>Verification of financial and property documents</li>
+        <li>Property identification and site visits</li>
+        <li>Reporting to Area Manager</li>
+        <li>Group loan coordination</li>
+        <li>Credit card marketing and account opening</li>
+      </ul>
+
+      <h2>Strengths</h2>
+      <ul>
+        <li>Excellent communication skills</li>
+        <li>Hardworking and self-motivated</li>
+        <li>Positive attitude and adaptability</li>
+        <li>Strong learning ability and confidence</li>
+      </ul>
+
+      <h2>Personal Information</h2>
+      <ul>
+        <li><strong>Date of Birth:</strong> 25-04-1990</li>
+        <li><strong>Gender:</strong> Male</li>
+        <li><strong>Marital Status:</strong> Married</li>
+        <li><strong>Languages Known:</strong> Gujarati, Hindi, English</li>
+        <li><strong>Hobbies:</strong> Playing cricket, listening to music</li>
+      </ul>
+
     </div>
   </section>
 
-  <!-- Experience Section -->
-  <section id="experience">
-    <h2 class="section-title reveal">Experience</h2>
-    <p class="section-subtitle reveal">15+ years of expertise across risk, fraud, and quality operations.</p>
-
-    <div class="experience-item reveal">
-      <h3>Etech Global Services</h3>
-      <span>Risk Analyst II – Quality Auditor | Jan 2026 – Present</span>
-      <ul>
-        <li>Conduct quality audits on risk cases for accuracy and compliance.</li>
-        <li>Provide analyst coaching and feedback.</li>
-        <li>Track quality trends and process gaps.</li>
-        <li>Collaborate with operations and training teams to improve risk detection standards.</li>
-      </ul>
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="socials">
+      <a href="#">WhatsApp</a>
+      <a href="#">Instagram</a>
+      <a href="mailto:piyushsolanki1530@gmail.com">Gmail</a>
     </div>
-
-    <div class="experience-item reveal">
-      <h3>Etech Global Services</h3>
-      <span>Risk Analyst II / Fraud Analyst | Chargeback Analyst | Sep 2017 – Dec 2025</span>
-      <ul>
-        <li>Investigated disputed card transactions and resolved cases via refunds, debits, or write-offs.</li>
-        <li>Researched transactions to determine legitimacy and fraud patterns.</li>
-        <li>Communicated findings to consumers and merchants via formal correspondence.</li>
-        <li>Performed real-time fraud and risk screening for a leading U.S. travel website.</li>
-        <li>Reviewed transactions generated by Accertify to detect and prevent losses.</li>
-        <li>Trained new analysts and supported onboarding.</li>
-        <li>Approved transactions in bulk by reviewing minimal data to clear queues.</li>
-        <li>Handled ~70 detailed investigations per day and ~500 bulk resolutions.</li>
-      </ul>
-    </div>
-
-    <div class="experience-item reveal">
-      <h3>Motif India Pvt. Ltd. (now TTEC)</h3>
-      <span>Sr. Fraud Analyst | Feb 2011 – Sep 2017</span>
-      <ul>
-        <li>Performed real-time fraud screening for travel websites.</li>
-        <li>Reviewed transactions using Accertify and Lantern for early fraud detection and loss prevention.</li>
-        <li>Served as a Trust & Safety team member for C2C platforms (Levels 100, 200, and 300 – Chargebacks).</li>
-        <li>Validated reservations, profiles, and properties.</li>
-        <li>Identified fraud trends and reported them to management for rule development.</li>
-        <li>Communicated directly with airlines, hotels, rental car companies, banks, and customers.</li>
-        <li>Reviewed 100+ transactions daily and handled 70+ customer emails per day.</li>
-        <li>Resolved customer issues related to quality, cancellations, refunds, and policy concerns.</li>
-        <li>Handled B2B communications with rental car partners.</li>
-      </ul>
-    </div>
-
-    <div class="experience-item reveal">
-      <h3>Etech Global Services</h3>
-      <span>Chat Representative | Jul 2010 – Jan 2011</span>
-      <ul>
-        <li>Sold internet and phone connections through live chat support.</li>
-      </ul>
-    </div>
-
-    <div class="experience-item reveal">
-      <h3>Mangalam Information Technologies Ltd.</h3>
-      <span>Sales Representative | Jan 2009 – Dec 2009</span>
-      <ul>
-        <li>Sold Mediclaim insurance policies primarily to senior citizens.</li>
-      </ul>
-    </div>
-
-    <div class="experience-item reveal">
-      <h3>Etech Global Services</h3>
-      <span>Customer Care Representative | Sep 2006 – Nov 2008</span>
-      <ul>
-        <li>Placed orders for U.S. sales representatives for phone and TV connections.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Tools Section -->
-  <section id="tools">
-    <h2 class="section-title reveal">Tools & Technologies</h2>
-    <p class="section-subtitle reveal">Platforms and systems used across risk, fraud, and quality operations.</p>
-    <div class="tools-grid">
-      <div class="tool reveal">Salesforce</div>
-      <div class="tool reveal">Accertify</div>
-      <div class="tool reveal">Lantern</div>
-      <div class="tool reveal">Zendesk</div>
-      <div class="tool reveal">Fraud Console</div>
-      <div class="tool reveal">LUX</div>
-      <div class="tool reveal">Torch</div>
-      <div class="tool reveal">Emailage</div>
-      <div class="tool reveal">Targus</div>
-      <div class="tool reveal">WPP</div>
-      <div class="tool reveal">MS Word</div>
-      <div class="tool reveal">Excel</div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section">
-    <h2 class="section-title reveal">Contact</h2>
-    <p class="reveal">Let’s connect to discuss risk, compliance, and quality assurance opportunities.</p>
-    <div class="contact-buttons reveal">
-      <a href="mailto:jp18886@yahoo.co.in" class="btn-primary">Email Me</a>
-      <a href="tel:9054798160" class="btn-outline">Call Me</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Jayesh R. Parmar. All rights reserved.</p>
+    <div>© 2026 Piyush Solanki | Online Resume</div>
   </footer>
 
-  <script>
-    // Scroll reveal animation
-    const reveals = document.querySelectorAll('.reveal');
-
-    function revealOnScroll() {
-      const windowHeight = window.innerHeight;
-      reveals.forEach(el => {
-        const elementTop = el.getBoundingClientRect().top;
-        const revealPoint = 100;
-        if (elementTop < windowHeight - revealPoint) {
-          el.classList.add('active');
-        }
-      });
-    }
-
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll();
-  </script>
 </body>
 </html>
